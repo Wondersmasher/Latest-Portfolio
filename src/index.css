@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Playfair:wght@300&display=swap");
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,3 +17,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+/* 
+
+black: #282C33
+primary:#C778DD
+gray:#ABB2BF
+white:#ffffff
+primary2:#E06B74
+primary3:#98C379
+primary4:#62AEEF
+*/
