@@ -4,13 +4,14 @@ export default {
   theme: {
     screens: {
       sm: "480px",
-      md: "770px",
+      md: "767px",
       lg: "970px",
       xl: "1440px",
     },
     colors: {
       black: "#282C33",
       primary: "#C778DD",
+      // primary: "#62AEEF",
       gray: "#ABB2BF",
       white: "#ffffff",
       primary2: "#E06B74",
@@ -44,6 +45,7 @@ export default {
         "bounce-slow": "bounce 3s infinite",
         "ping-slow": "ping 3s infinite",
         "pulse-slow": "pulse 3s infinite",
+        "spin-slow": "spin 4s infinite",
       },
     },
   },
