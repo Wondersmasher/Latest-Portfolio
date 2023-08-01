@@ -46,6 +46,7 @@ export default {
         "ping-slow": "ping 3s infinite",
         "pulse-slow": "pulse 3s infinite",
         "spin-slow": "spin 4s infinite",
+        "spin-very-slow": "spin 8s infinite",
       },
     },
   },
