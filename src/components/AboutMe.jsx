@@ -1,11 +1,12 @@
 import React from "react";
 import SectionContainer from "./subcomponents/SectionContainer";
+import Texts from "./subcomponents/Texts";
 
 const AboutMe = () => {
   return (
-    <SectionContainer title="aboutMe">
+    <SectionContainer title="aboutMe" pt="pt-0" lgpt="lg:pt-16">
       <div className="flex gap-8 justify-center items-center flex-col md:flex-row ">
-        <div className="flex flex-col flex-1  gap-4 md:w-[50%] w-[100%] text-justify">
+        <Texts size="md">
           <p className="text-lg">
             Hello I'm <span className="text-primary">Ezekiel Akinniyi</span>
           </p>
@@ -28,7 +29,7 @@ const AboutMe = () => {
           </p>
 
           <p>Let's collaborate and bring your visions to life!</p>
-        </div>
+        </Texts>
         <div className="relative">
           <img
             src="/about.png"
