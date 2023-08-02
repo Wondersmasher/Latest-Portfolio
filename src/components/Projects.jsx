@@ -4,7 +4,7 @@ import SectionContainer from "./subcomponents/SectionContainer";
 
 const Projects = () => {
   return (
-    <SectionContainer title="project">
+    <SectionContainer title="projects">
       <div className="flex flex-wrap lg:flex-nowrap gap-4 justify-center items-center ">
         <SingleProject
           tools="React Node Express MongoDb Vite Tailwind"
