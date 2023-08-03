@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 import SectionContainer from "./subcomponents/SectionContainer";
 import Texts from "./subcomponents/Texts";
 import emailjs from "emailjs-com";
+import Animate from "./animationcomponents/Animate";
 
-const ContactMe = () => {
+const ContactMe = ({ contact }) => {
   const form = useRef();
   const input1 = useRef();
   const input2 = useRef();
@@ -46,65 +47,79 @@ const ContactMe = () => {
   };
 
   return (
-    <SectionContainer title="contactMe">
+    <SectionContainer title="contactMe" theRef={contact}>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8 pb-12">
         <Texts size="lg">
-          <p>
-            I'm excited to hear from you and explore the endless possibilities
-            of frontend development.
-          </p>
-          <p>
-            Whether you have a project in mind or need a skilled developer to
-            breathe life into your ideas, don't hesitate to reach out! Use the
-            form below to get in touch, and let's create something extraordinary
-            together.
-          </p>
-          <p>Looking forward to connecting with you!</p>
+          <Animate>
+            <p>
+              I'm excited to hear from you and explore the endless possibilities
+              of frontend development.
+            </p>
+          </Animate>
+          <Animate>
+            <p>
+              Whether you have a project in mind or need a skilled developer to
+              breathe life into your ideas, don't hesitate to reach out! Use the
+              form below to get in touch, and let's create something
+              extraordinary together.
+            </p>
+          </Animate>
+          <Animate>
+            <p>Looking forward to connecting with you!</p>
+          </Animate>
         </Texts>
         <form ref={form} className="flex flex-col gap-3 lg:w-[50%] w-[100%] ">
-          <div className="md:flex grid gap-4">
+          <Animate>
+            <div className="md:flex grid gap-4">
+              <input
+                ref={input1}
+                className={`border-[1px]    focus:outline-none w-[100%] p-1 bg-black `}
+                type="text"
+                name="name"
+                id="1"
+                placeholder="Full Name"
+              />
+              <input
+                ref={input2}
+                className={`  border-[1px]   focus:outline-none w-[100%] p-1 bg-black`}
+                type="email"
+                name="email"
+                id="2"
+                placeholder="E-mail"
+                required
+              />
+            </div>
+          </Animate>
+          <Animate>
             <input
-              ref={input1}
-              className={`border-[1px]    focus:outline-none w-[100%] p-1 bg-black `}
+              ref={input3}
+              className={` border-[1px]   bg-black focus:outline-none w-[100%] p-1 `}
               type="text"
-              name="name"
-              id="1"
-              placeholder="Full Name"
+              name="subject"
+              id="3"
+              placeholder="Subject"
             />
-            <input
-              ref={input2}
-              className={`  border-[1px]   focus:outline-none w-[100%] p-1 bg-black`}
-              type="email"
-              name="email"
-              id="2"
-              placeholder="E-mail"
-              required
+          </Animate>
+          <Animate>
+            <textarea
+              ref={input4}
+              className={`bg-black h-32 border-[1px]    focus:outline-none mx-auto w-[100%] p-1`}
+              type="text"
+              name="message"
+              id="4"
+              placeholder="Your Message"
             />
-          </div>
-          <input
-            ref={input3}
-            className={` border-[1px]   bg-black focus:outline-none w-[100%] p-1 `}
-            type="text"
-            name="subject"
-            id="3"
-            placeholder="Subject"
-          />
-          <textarea
-            ref={input4}
-            className={`bg-black h-32 border-[1px]    focus:outline-none mx-auto w-[100%] p-1`}
-            type="text"
-            name="message"
-            id="4"
-            placeholder="Your Message"
-          />
+          </Animate>
           <div>
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              className=" border-[1px]   p-2  mt-3 font-bold font-sacramento"
-            >
-              Send Message
-            </button>
+            <Animate>
+              <button
+                type="submit"
+                onClick={handleSubmit}
+                className=" border-[1px]   p-2  mt-3 font-bold font-sacramento"
+              >
+                Send Message
+              </button>
+            </Animate>
           </div>
         </form>
       </div>
