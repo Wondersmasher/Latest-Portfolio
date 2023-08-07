@@ -21,7 +21,7 @@ const App = () => {
         contact={contact}
         home={home}
       />
-      <Hero home={home} />
+      <Hero home={home} contact={contact} />
       <AboutMe about={about} />
       <Skills skills={skills} />
       <Projects projects={projects} />

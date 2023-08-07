@@ -1,7 +1,13 @@
 import React from "react";
 import Animate from "./animationcomponents/Animate";
 import Reveal from "./animationcomponents/Reaveal";
-const Hero = ({ home }) => {
+import resume from "../assets/Ezekiel Akinniyi Resume.pdf";
+const Hero = ({ home, contact }) => {
+  const scrollTocontactMe = () => {
+    contact?.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <Reveal>
       <div
@@ -43,12 +49,17 @@ const Hero = ({ home }) => {
           <Animate>
             <div className="animate-bounce-slow hover:animate-none">
               <div className="text-white border-2 px-4 py-2 border-white cursor-pointer animate-pulse-slow hover:animate-none">
-                Resume
+                <a href={resume} target="_blank">
+                  Resume
+                </a>
               </div>
             </div>
           </Animate>
           <Animate>
-            <div className="text-white border-2 px-4 py-2 border-white cursor-pointer animate-pulse-slow hover:animate-none">
+            <div
+              className="text-white border-2 px-4 py-2 border-white cursor-pointer animate-pulse-slow hover:animate-none"
+              onClick={scrollTocontactMe}
+            >
               Contact me!!
             </div>
           </Animate>
