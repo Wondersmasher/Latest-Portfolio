@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 const NavBar = ({ about, home, skills, projects, contact }) => {
-  const [showSideBar, setShowSideBar] = useState(true);
+  const [showSideBar, setShowSideBar] = useState(false);
   const scroll = (theRef) => {
     theRef.current?.scrollIntoView({
       behavior: "smooth",
